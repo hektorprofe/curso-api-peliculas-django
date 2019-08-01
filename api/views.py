@@ -19,10 +19,10 @@ class MarcarPeliculaFavorita(views.APIView):
   authentication_classes = [TokenAuthentication]
   permission_classes = [IsAuthenticated]
 
-  # PUT  -> Se usa para crear un recurso
-  # POST -> Se usa para modificar/actualizar un recurso
+  # POST -> Se usa para crear un recurso sin un identificador
+  # PUT -> Se usa para crear/reemplazar un recurso con un identificador
 
-  def put(self, request):
+  def post(self, request):
 
     pelicula = get_object_or_404(
       Pelicula, id=self.request.data.get('id', 0)
