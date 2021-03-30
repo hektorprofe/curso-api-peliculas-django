@@ -6,7 +6,7 @@ Curso gratuito en el enlace de mi academia
 Instala las dependencias en un entorno virtual Pipenv:
 
 ```
-pipenv install -r requirements.txt
+pipenv install
 ```
 
 Ejecuta el servidor:
